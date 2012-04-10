@@ -1,3 +1,38 @@
+" vim:set foldmethod=marker foldlevel=0:
+" .vimrc
+
+" vundle setting {{{
+set nocompatible
+filetype off
+
+set rtp+=~/.vim/vundle/
+call vundle#rc()
+
+" Initialize vundle
+" cd ~/.vim/  or  cd GIT_TOP_DIR
+" git submodule init
+" git submodule update
+
+" repository samples
+"" original repos on github
+"Bundle 'tpope/vim-fugitive'
+"" vim-scripts repos
+"Bundle 'rails.vim'
+"" non github repos
+"Bundle 'git://git.wincent.com/command-t.git'
+
+" Install
+" :BundleInstall
+" Update
+" :BundleInstall!
+
+" repositories
+Bundle 'Lokaltog/vim-powerline'
+
+filetype plugin indent on
+" }}} vundle setting end
+
+
 syntax on
 filetype plugin indent on
 set tabstop=4 shiftwidth=4 softtabstop=4
