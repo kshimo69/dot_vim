@@ -5,8 +5,15 @@
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/vundle/
-call vundle#rc()
+if has("win32") || has("win64")
+  set rtp+=~/vimfiles/vundle/
+  call vundle#rc('~/vimfiles/bundle/')
+else
+  set rtp+=~/.vim/vundle/
+  call vundle#rc()
+endif
+"set rtp+=~/.vim/vundle/
+"call vundle#rc()
 
 " Initialize vundle
 " cd ~/.vim/  or  cd GIT_TOP_DIR
