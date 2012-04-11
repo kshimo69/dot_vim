@@ -69,3 +69,45 @@ nmap ,ee :e ++enc=euc-jp<CR>
 nmap ,es :e ++enc=cp932<CR>
 nmap ,ej :e ++enc=iso-2022-jp<CR>
 nmap ,eu :e ++enc=utf-8<CR>
+
+" View {{{
+
+" GUI {{{
+if has('gui_running')
+    " sidebar
+    set guioptions& " initialize
+    set guioptions+=b
+    " clip board
+    " http://vim-users.jp/2010/02/hack126/
+    set clipboard=unnamed,autoselect
+    set guioptions+=a
+    "set guifont=M+2VM+IPAG\ circle\ 14
+    "set guifont=VL\ Gothic\ 14
+    " window size
+    "set lines=30
+    "set columns=120
+    gui
+    "set transparency=20
+endif
+if has('gui_macvim')
+    set guioptions& " initialize
+    set guioptions-=T
+    set guioptions+=a
+    set imdisable
+    set antialias
+    colorscheme macvim
+    "set guifont=M+2VM+IPAG\ circle\ Regular:h14
+    "set guifont=Monaco:h14
+    set guifont=Ricty\ Regular:h16
+    set transparency=20
+    set lines=40
+    set columns=120
+    set fuoptions=maxvert,maxhorz
+    set fullscreen
+    "au GUIEnter * set fullscreen
+endif
+" GUI end }}}
+
+colorscheme koehler
+
+" }}} View
