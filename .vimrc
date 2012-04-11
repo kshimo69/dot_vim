@@ -50,10 +50,10 @@ elseif isdirectory($VIM . '\vimfiles')
   let $MY_VIMRUNTIME = $VIM.'\vimfiles'
 endif
 
-" powerline {{{
+" plugin powerline {{{
 " splitしてない時にstatus lineが出ない対策
 set laststatus=2
-" }}} powerline
+" }}} plugin powerline
 
 syntax on
 filetype plugin indent on
