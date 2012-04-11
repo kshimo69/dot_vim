@@ -1,43 +1,52 @@
 " vim:set foldmethod=marker foldlevel=0:
 " .vimrc
 
-" plugin vundle {{{
+" plugin neovundle {{{
 set nocompatible
 filetype off
 
-if has("win32") || has("win64")
-  set rtp+=~/vimfiles/vundle/
-  call vundle#rc('~/vimfiles/bundle/')
-else
-  set rtp+=~/.vim/vundle/
-  call vundle#rc()
-endif
-"set rtp+=~/.vim/vundle/
-"call vundle#rc()
+"if has('vim_starting')
+"  if has("win32") || has("win64")
+"    set runtimepath+=~/vimfiles/vundle/
+"    call neobundle#rc(expand('~/vimfiles/bundle/'))
+"  else
+    set runtimepath+=~/.vim/vundle/
+    call neobundle#rc(expand('~/.vim/bundle/'))
+"  endif
+"endif
+"if has('vim_starting')
+"  if has("win32") || has("win64")
+"    set rtp+=~/vimfiles/vundle/
+"    call neobundle#rc(expand('~/vimfiles/bundle/'))
+"  else
+"    set rtp+=~/.vim/vundle/
+"    call neobundle#rc(expand('~/.vim/bundle/'))
+"  endif
+"endif
 
-" Initialize vundle
+" Initialize neobundle
 " cd ~/.vim/  or  cd GIT_TOP_DIR
 " git submodule init
 " git submodule update
 
 " repository samples
 "" original repos on github
-"Bundle 'tpope/vim-fugitive'
+"NeoBundle 'tpope/vim-fugitive'
 "" vim-scripts repos
-"Bundle 'rails.vim'
+"NeoBundle 'rails.vim'
 "" non github repos
-"Bundle 'git://git.wincent.com/command-t.git'
+"NeoBundle 'git://git.wincent.com/command-t.git'
 
 " Install
-" :BundleInstall
+" :NeoBundleInstall
 " Update
-" :BundleInstall!
+" :NeoBundleInstall!
 
 " repositories
-Bundle 'Lokaltog/vim-powerline'
+NeoBundle 'Lokaltog/vim-powerline'
 
 filetype plugin indent on
-" }}} plugin vundle
+" }}} plugin neobundle
 
 "Windows, unixでのruntimepathの違いを吸収するためのもの。
 "$MY_VIMRUNTIMEはユーザーランタイムディレクトリを示す。
