@@ -34,7 +34,7 @@ endif
 " :NeoBundleInstall!
 
 " repositories
-NeoBundle 'https://github.com/Lokaltog/vim-powerline.git'
+NeoBundle 'https://github.com/Lokaltog/vim-powerline'
 
 filetype plugin indent on
 " }}} plugin neobundle
