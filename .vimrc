@@ -48,6 +48,7 @@ endif
 " repositories
 " --------------------------------
 NeoBundle 'https://github.com/Lokaltog/vim-powerline'
+NeoBundle 'https://github.com/tpope/vim-fugitive'
 
 filetype plugin indent on
 " }}} plugin neobundle
@@ -66,7 +67,14 @@ endif
 " plugin powerline {{{
 " splitしてない時にstatus lineが出ない対策
 set laststatus=2
+" 矢印とかだそうとしてみる
 let g:Powerline_symbols = 'unicode'
+" TODO: gitのbranchとか表示したい
+function! Powerline#Functions#fugitive#GetBranch(symbol)
+  let ret = fugitive#statusline()
+  let ret = substitute(ret, '\c\v\[?GIT\(([a-z0-9\-_\./:]+)\)\]?', a:symbol .' \1', 'g')
+  return ret
+endfunction
 " }}} plugin powerline
 
 syntax on
