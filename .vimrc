@@ -1,7 +1,7 @@
 " vim:set foldmethod=marker foldlevel=0:
 " .vimrc
 
-" vundle {{{
+" plugin vundle {{{
 set nocompatible
 filetype off
 
@@ -37,7 +37,7 @@ endif
 Bundle 'Lokaltog/vim-powerline'
 
 filetype plugin indent on
-" }}} vundle
+" }}} plugin vundle
 
 "Windows, unixでのruntimepathの違いを吸収するためのもの。
 "$MY_VIMRUNTIMEはユーザーランタイムディレクトリを示す。
