@@ -47,8 +47,12 @@ endif
 " --------------------------------
 " repositories
 " --------------------------------
+" status lineをいい感じにするやつ
 NeoBundle 'https://github.com/Lokaltog/vim-powerline'
+" git wrapper
 NeoBundle 'https://github.com/tpope/vim-fugitive'
+" コメントをトグルするやつ
+NeoBundle 'https://github.com/scrooloose/nerdcommenter'
 
 filetype plugin indent on
 " }}} plugin neobundle
@@ -68,7 +72,7 @@ endif
 " splitしてない時にstatus lineが出ない対策
 set laststatus=2
 " 矢印とかだそうとしてみる
-let g:Powerline_symbols = 'unicode'
+"let g:Powerline_symbols = 'unicode'
 " TODO: gitのbranchとか表示したい
 function! Powerline#Functions#fugitive#GetBranch(symbol)
   let ret = fugitive#statusline()
@@ -76,6 +80,12 @@ function! Powerline#Functions#fugitive#GetBranch(symbol)
   return ret
 endfunction
 " }}} plugin powerline
+
+" plugin nerdcommenter {{{
+let NERDSpaceDelims = 1
+nmap ,, <Plug>NERDCommenterToggle
+vmap ,, <Plug>NERDCommenterToggle
+" }}} plugin nerdcommenter
 
 syntax on
 filetype plugin indent on
