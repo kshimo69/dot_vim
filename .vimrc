@@ -15,25 +15,38 @@ if has('vim_starting')
   endif
 endif
 
+" --------------------------------
 " Initialize neobundle
+" --------------------------------
 " cd ~/.vim/  or  cd GIT_TOP_DIR
 " git submodule init
 " git submodule update
 
+" --------------------------------
 " repository samples
-"" original repos on github
+" --------------------------------
+" original repos on github
 "NeoBundle 'tpope/vim-fugitive'
-"" vim-scripts repos
+" https on github
+"NeoBundle 'https://github.com/USER/REPONAME'
+" vim-scripts repos
 "NeoBundle 'rails.vim'
-"" non github repos
+" non github repos
 "NeoBundle 'git://git.wincent.com/command-t.git'
 
+" --------------------------------
 " Install
+" --------------------------------
 " :NeoBundleInstall
+"
+" --------------------------------
 " Update
+" --------------------------------
 " :NeoBundleInstall!
 
+" --------------------------------
 " repositories
+" --------------------------------
 NeoBundle 'https://github.com/Lokaltog/vim-powerline'
 
 filetype plugin indent on
