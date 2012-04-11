@@ -66,6 +66,7 @@ endif
 " plugin powerline {{{
 " splitしてない時にstatus lineが出ない対策
 set laststatus=2
+let g:Powerline_symbols = 'unicode'
 " }}} plugin powerline
 
 syntax on
