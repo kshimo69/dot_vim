@@ -14,15 +14,6 @@ if has('vim_starting')
     call neobundle#rc(expand('~/.vim/bundle/'))
   endif
 endif
-"if has('vim_starting')
-"  if has("win32") || has("win64")
-"    set rtp+=~/vimfiles/vundle/
-"    call neobundle#rc(expand('~/vimfiles/bundle/'))
-"  else
-"    set rtp+=~/.vim/vundle/
-"    call neobundle#rc(expand('~/.vim/bundle/'))
-"  endif
-"endif
 
 " Initialize neobundle
 " cd ~/.vim/  or  cd GIT_TOP_DIR
