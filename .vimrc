@@ -61,10 +61,14 @@ set tabstop=4 shiftwidth=4 softtabstop=4
 set smarttab
 set expandtab
 set ffs=unix,dos,mac  " return code
-if !(has("win32") || has("win95") || has("win64") || has("win16"))
-   set encoding=utf-8  " default encoding
-endif
+set encoding=utf-8  " default encoding
 set fileencodings=utf-8,ucs-bom,iso-2022-jp-3,iso-2022-jp,eucjp-ms,euc-jisx0213,euc-jp,sjis,cp932
+if !(has("win32") || has("win95") || has("win64") || has("win16"))
+    " WindowsのKaoriyaでメニューが化ける対策
+    source $VIMRUNTIME/delmenu.vim
+    set langmenu=none
+    source $VIMRUNTIME/menu.vim
+endif
 nmap ,ee :e ++enc=euc-jp<CR>
 nmap ,es :e ++enc=cp932<CR>
 nmap ,ej :e ++enc=iso-2022-jp<CR>
