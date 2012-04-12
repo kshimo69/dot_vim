@@ -51,7 +51,7 @@ endif
 NeoBundle 'https://github.com/tpope/vim-fugitive'
 " 補完
 NeoBundle 'https://github.com/Shougo/neocomplcache'
-NeoBundle 'https://github.com/Shougo/clang_complete'
+NeoBundle 'https://github.com/Shougo/neocomplcache-clang'
 " unite
 NeoBundle 'https://github.com/Shougo/unite.vim'
 NeoBundle 'https://github.com/h1mesuke/unite-outline'
