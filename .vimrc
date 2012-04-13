@@ -86,16 +86,24 @@ elseif isdirectory($VIM . '\vimfiles')
 endif
 
 " plugin powerline {{{
+let g:Powerline_symbols = 'compatible'
 " splitしてない時にstatus lineが出ない対策
 set laststatus=2
-" 矢印とかだそうとしてみる
-"let g:Powerline_symbols = 'unicode'
-" TODO: gitのbranchとか表示したい
-function! Powerline#Functions#fugitive#GetBranch(symbol)
-  let ret = fugitive#statusline()
-  let ret = substitute(ret, '\c\v\[?GIT\(([a-z0-9\-_\./:]+)\)\]?', a:symbol .' \1', 'g')
-  return ret
-endfunction
+" Overriding symbols
+let g:Powerline_symbols_override = {
+  \ 'LINE': 'L',
+  \ }
+" Overriding dividers
+" 1: Hard right-pointing arrow
+" 2: Soft right-pointing arrow
+" 3: Hard left-pointing arrow
+" 4: Soft left-pointing arrow
+"let g:Powerline_dividers_override = ['>>', '>', '<<', '<']
+let g:Powerline_dividers_override = ['', '', '', '']
+" ファイル名を短く表示する
+let g:Powerline_stl_path_style = "short"
+" Insert the charcode segment after the filetype segment
+"call Pl#Theme#InsertSegment('charcode', 'after', 'filetype')
 " }}} plugin powerline
 
 " plugin nerdcommenter {{{
