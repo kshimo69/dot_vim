@@ -5,6 +5,9 @@
 set nocompatible
 filetype off
 
+" httpsで取ってくるように指定する
+let g:neobundle_default_git_protocol = 'https'
+
 if has('vim_starting')
   if has("win32") || has("win64")
     set runtimepath+=~/vimfiles/neobundle/
@@ -48,25 +51,25 @@ endif
 " repositories
 " --------------------------------
 " git wrapper
-NeoBundle 'https://github.com/tpope/vim-fugitive'
+NeoBundle 'tpope/vim-fugitive'
 " 補完
-NeoBundle 'https://github.com/Shougo/neocomplcache'
-NeoBundle 'https://github.com/Shougo/neocomplcache-clang'
+NeoBundle 'Shougo/neocomplcache'
+NeoBundle 'Shougo/neocomplcache-clang'
 " unite
-NeoBundle 'https://github.com/Shougo/unite.vim'
-NeoBundle 'https://github.com/h1mesuke/unite-outline'
-NeoBundle 'https://github.com/Shougo/unite-build'
-NeoBundle 'https://github.com/tsukkee/unite-tag'
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'h1mesuke/unite-outline'
+NeoBundle 'Shougo/unite-build'
+NeoBundle 'tsukkee/unite-tag'
 " vimproc
-NeoBundle 'https://github.com/Shougo/vimproc'
+NeoBundle 'Shougo/vimproc'
 " vimshell
-NeoBundle 'https://github.com/Shougo/vimshell'
+NeoBundle 'Shougo/vimshell'
 " quickrun
-NeoBundle 'https://github.com/thinca/vim-quickrun'
+NeoBundle 'thinca/vim-quickrun'
 " コメントをトグルするやつ
-NeoBundle 'https://github.com/scrooloose/nerdcommenter'
+NeoBundle 'scrooloose/nerdcommenter'
 " status lineをいい感じにするやつ
-NeoBundle 'https://github.com/Lokaltog/vim-powerline'
+NeoBundle 'Lokaltog/vim-powerline'
 
 filetype plugin indent on
 " }}} plugin neobundle
