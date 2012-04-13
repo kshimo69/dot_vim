@@ -136,6 +136,9 @@ nmap ,es :e ++enc=cp932<CR>
 nmap ,ej :e ++enc=iso-2022-jp<CR>
 nmap ,eu :e ++enc=utf-8<CR>
 
+" モード変更時にIMEをoffにする設定
+set imdisable
+
 " View {{{
 
 " GUI {{{
