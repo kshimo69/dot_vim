@@ -80,8 +80,8 @@ NeoBundle 'Lokaltog/vim-powerline'
 " Surround
 "NeoBundle 'tpope/vim-surround'
 " Web
-"NeoBundle 'mattn/webapi-vim'
-"NeoBundle 'mattn/mkdpreview-vim'
+NeoBundle 'mattn/webapi-vim'
+NeoBundle 'mattn/mkdpreview-vim'
 "NeoBundle 'tyru/open-browser.vim'
 " Doc
 NeoBundle 'Shougo/echodoc.git'
