@@ -326,7 +326,7 @@ source $VIMRUNTIME/macros/matchit.vim
 " http://d.hatena.ne.jp/ruedap/20110110/vim_unite_plugin
 " http://d.hatena.ne.jp/Voluntas/20110823/1314031095
 " 入力モードで開始する
-" let g:unite_enable_start_insert=1
+let g:unite_enable_start_insert=1
 " バッファ一覧
 nnoremap <silent> ,ub :<C-u>Unite buffer -direction=botright -auto-resize -toggle<CR>
 " ファイル一覧
@@ -336,10 +336,10 @@ nnoremap <silent> ,ur :<C-u>Unite -buffer-name=register register -direction=botr
 " 最近使用したファイル一覧
 nnoremap <silent> ,um :<C-u>Unite file_mru -direction=botright -auto-resize -toggle<CR>
 " 常用セット
-nnoremap <silent> ,uu :<C-u>Unite buffer file_mru -direction=botright -auto-resize -toggle<CR>
-nnoremap <silent> ;; :<C-u>Unite buffer file_mru -direction=botright -auto-resize -toggle<CR>
+nnoremap <silent> ,uu :<C-u>Unite buffer file_mru file file/new -direction=botright -auto-resize -toggle<CR>
+nnoremap <silent> ;; :<C-u>Unite buffer file_mru file file/new -direction=botright -auto-resize -toggle<CR>
 " 全部乗せ
-nnoremap <silent> ,ua :<C-u>UniteWithBufferDir -buffer-name=files buffer file_mru bookmark file -direction=botright -auto-resize -toggle<CR>
+nnoremap <silent> ,ua :<C-u>UniteWithBufferDir -buffer-name=files buffer file_mru bookmark file file/new -direction=botright -auto-resize -toggle<CR>
 
 " ウィンドウを分割して開く
 au FileType unite nnoremap <silent> <buffer> <expr> <C-j> unite#do_action('split')
