@@ -87,7 +87,7 @@ NeoBundle 'Lokaltog/vim-powerline'
 " Web
 NeoBundle 'mattn/webapi-vim'
 NeoBundle 'mattn/mkdpreview-vim'
-"NeoBundle 'tyru/open-browser.vim'
+NeoBundle 'tyru/open-browser.vim'
 " ColorScheme
 NeoBundle 'desert256.vim'
 NeoBundle 'tomasr/molokai'
@@ -235,6 +235,8 @@ endif
 colorscheme xoria256
 
 " }}} View
+
+" ==== Plugins ==== {{{
 
 " plugin neocomplcache {{{
 " Setting examples:
@@ -386,3 +388,11 @@ function! s:unite_my_settings()
 endfunction
 " }}} plugin unite
 
+" plugin open-browser {{{
+" http://vim-users.jp/2011/08/hack225/
+let g:netrw_nogx = 1 " disable netrw's gx mapping.
+nmap gx <Plug>(openbrowser-smart-search)
+vmap gx <Plug>(openbrowser-smart-search)
+" }}} plugin open-browser
+
+" }}} ==== Plugins ====
