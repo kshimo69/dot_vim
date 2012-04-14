@@ -91,6 +91,8 @@ NeoBundle 'Shougo/echodoc.git'
 NeoBundle 'python_match.vim'
 " Rails
 "NeoBundle 'tpope/vim-rails'
+" SQL
+"NeoBundle 'SQLUtilities'
 
 filetype plugin indent on
 " }}} plugin neobundle
