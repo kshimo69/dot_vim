@@ -192,6 +192,17 @@ colorscheme xoria256
 
 " }}} View
 
+" ==== Programming ==== {{{
+
+" Sukicolle {{{
+augroup sukicolleroot
+  autocmd!
+  autocmd BufEnter ~/Dropbox/project/sukicolle/wire/**/* lcd ~/Dropbox/project/sukicolle/wire
+augroup END
+" }}} Sukicolle
+
+" }}} ==== Programming ====
+
 " ==== Functions ==== {{{
 
 " Allargs {{{
