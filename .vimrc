@@ -87,6 +87,8 @@ NeoBundle 'Shougo/echodoc.git'
 "NeoBundle 'thinca/vim-ref'
 " Project
 "NeoBundle 'project.tar.gz'
+" Tags
+"NeoBundle 'taglist.vim'  " require: http://ctags.sourceforge.net/
 " Python
 NeoBundle 'python_match.vim'
 " Rails
