@@ -81,7 +81,7 @@ NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'Lokaltog/vim-powerline'
 " Utils
 "NeoBundle 'YankRing.vim'
-"NeoBundle 'Align'
+NeoBundle 'Align'
 "NeoBundle 'tpope/vim-surround'
 "NeoBundle 'kana/vim-smartchr'
 " Web
@@ -96,7 +96,7 @@ NeoBundle 'xoria256.vim'
 NeoBundle 'Shougo/echodoc.git'
 "NeoBundle 'thinca/vim-ref'
 " Project, Explorer
-"NeoBundle 'project.tar.gz'
+NeoBundle 'project.tar.gz'
 "NeoBundle 'scrooloose/nerdtree'
 "NeoBundle 'vtreeexplorer'
 " Tags
@@ -412,5 +412,22 @@ let g:quickrun_config['rst'] = {
   \ 'outputter': 'browser',
   \ }
 " }}} plugin quickrun
+
+" plugin project {{{
+:let g:proj_flags = "imstc"
+":nmap <silent> <Leader>p <Plug>ToggleProject
+":nmap <silent> <Leader>P :Project<CR>
+if getcwd() != $HOME
+    if filereadable(getcwd(). '/.vimprojects')
+        Project .vimprojects
+    endif
+endif
+autocmd BufAdd .vimprojects silent! %foldopen!
+" }}} plugin project
+
+" plugin Align {{{
+let g:Align_xstrlen = 3
+let g:DrChipTopLvlMenu = 'Align'
+" }}} plugin Align
 
 " }}} ==== Plugins ====
