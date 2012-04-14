@@ -194,6 +194,20 @@ colorscheme xoria256
 
 " ==== Functions ==== {{{
 
+" AllMaps {{{
+" http://vim-users.jp/2011/02/hack203/
+" 全てのマッピングを表示
+" :AllMaps
+" 現在のバッファで定義されたマッピングのみ表示
+" :AllMaps <buffer>
+" どのスクリプトで定義されたかの情報も含め表示
+" :verbose AllMaps <buffer>
+command!
+\   -nargs=* -complete=mapping
+\   AllMaps
+\   map <args> | map! <args> | lmap <args>
+" }}} AllMaps
+
 " Open junk file {{{
 " http://vim-users.jp/2010/11/hack181/
 command! -nargs=0 JunkFile call s:open_junk_file()
