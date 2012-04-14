@@ -67,7 +67,7 @@ NeoBundle 'Sixeight/unite-grep'
 NeoBundle 'basyura/unite-rails'
 NeoBundle 'thinca/vim-unite-history'
 NeoBundle 'thinca/vim-openbuf'
-NeoBundle 'choplin/unite-vim_hacks'
+NeoBundle 'kshimo69/unite-vim_hacks'
 "NeoBundle 'Shougo/vimfiler'
 " vimproc
 NeoBundle 'Shougo/vimproc'
