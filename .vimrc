@@ -131,50 +131,6 @@ elseif isdirectory($VIM . '\vimfiles')
   let $MY_VIMRUNTIME = $VIM.'\vimfiles'
 endif
 
-" plugin powerline {{{
-let g:Powerline_symbols = 'compatible'
-" splitしてない時にstatus lineが出ない対策
-set laststatus=2
-" Overriding symbols
-let g:Powerline_symbols_override = {
-  \ 'LINE': 'L',
-  \ }
-" Overriding dividers
-" 1: Hard right-pointing arrow
-" 2: Soft right-pointing arrow
-" 3: Hard left-pointing arrow
-" 4: Soft left-pointing arrow
-"let g:Powerline_dividers_override = ['>>', '>', '<<', '<']
-let g:Powerline_dividers_override = ['', '', '', '']
-" ファイル名を短く表示する
-let g:Powerline_stl_path_style = "short"
-" Insert the charcode segment after the filetype segment
-"call Pl#Theme#InsertSegment('charcode', 'after', 'filetype')
-" }}} plugin powerline
-
-" plugin nerdcommenter {{{
-let NERDSpaceDelims = 1
-let NERDDefaultNesting = 0
-" ,,でコメントをトグルする
-nmap ,, <Plug>NERDCommenterToggle
-vmap ,, <Plug>NERDCommenterToggle
-" }}} plugin nerdcommenter
-
-" plugin vim-fugitive {{{
-"nnoremap <Space>gd :<C-u>Gdiff<Enter>
-"nnoremap <Space>gs :<C-u>Gstatus<Enter>
-"nnoremap <Space>gl :<C-u>Glog<Enter>
-"nnoremap <Space>ga :<C-u>Gwrite<Enter>
-"nnoremap <Space>gc :<C-u>Gcommit<Enter>
-"nnoremap <Space>gC :<C-u>Git commit --amend<Enter>
-"nnoremap <Space>gb :<C-u>Gblame<Enter>
-" }}} plugin vim-fugitive
-
-" plugin echodoc {{{
-" 自動的に有効
-let g:echodoc_enable_at_startup = 1
-" }}} plugin echodoc
-
 syntax on
 filetype plugin indent on
 set tabstop=4 shiftwidth=4 softtabstop=4
@@ -237,6 +193,45 @@ colorscheme xoria256
 " }}} View
 
 " ==== Plugins ==== {{{
+
+" plugin powerline {{{
+let g:Powerline_symbols = 'compatible'
+" splitしてない時にstatus lineが出ない対策
+set laststatus=2
+" Overriding symbols
+let g:Powerline_symbols_override = {
+  \ 'LINE': 'L',
+  \ }
+" Overriding dividers
+" 1: Hard right-pointing arrow
+" 2: Soft right-pointing arrow
+" 3: Hard left-pointing arrow
+" 4: Soft left-pointing arrow
+"let g:Powerline_dividers_override = ['>>', '>', '<<', '<']
+let g:Powerline_dividers_override = ['', '', '', '']
+" ファイル名を短く表示する
+let g:Powerline_stl_path_style = "short"
+" Insert the charcode segment after the filetype segment
+"call Pl#Theme#InsertSegment('charcode', 'after', 'filetype')
+" }}} plugin powerline
+
+" plugin nerdcommenter {{{
+let NERDSpaceDelims = 1
+let NERDDefaultNesting = 0
+" ,,でコメントをトグルする
+nmap ,, <Plug>NERDCommenterToggle
+vmap ,, <Plug>NERDCommenterToggle
+" }}} plugin nerdcommenter
+
+" plugin vim-fugitive {{{
+"nnoremap <Space>gd :<C-u>Gdiff<Enter>
+"nnoremap <Space>gs :<C-u>Gstatus<Enter>
+"nnoremap <Space>gl :<C-u>Glog<Enter>
+"nnoremap <Space>ga :<C-u>Gwrite<Enter>
+"nnoremap <Space>gc :<C-u>Gcommit<Enter>
+"nnoremap <Space>gC :<C-u>Git commit --amend<Enter>
+"nnoremap <Space>gb :<C-u>Gblame<Enter>
+" }}} plugin vim-fugitive
 
 " plugin neocomplcache {{{
 " Setting examples:
@@ -394,5 +389,10 @@ let g:netrw_nogx = 1 " disable netrw's gx mapping.
 nmap gx <Plug>(openbrowser-smart-search)
 vmap gx <Plug>(openbrowser-smart-search)
 " }}} plugin open-browser
+
+" plugin echodoc {{{
+" 自動的に有効
+let g:echodoc_enable_at_startup = 1
+" }}} plugin echodoc
 
 " }}} ==== Plugins ====
