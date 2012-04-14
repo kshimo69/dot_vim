@@ -395,4 +395,22 @@ vmap gx <Plug>(openbrowser-smart-search)
 let g:echodoc_enable_at_startup = 1
 " }}} plugin echodoc
 
+" plugin quickrun {{{
+let g:quickrun_config = {}
+
+" RSpec
+let g:quickrun_config['ruby.rspec'] = {'command': 'spec'}
+"let g:quickrun_config['ruby.rspec'] = {'command': "spec -l {line('.')}"}
+augroup UjihisaRSpec
+  autocmd!
+  autocmd BufWinEnter,BufNewFile *_spec.rb set filetype=ruby.rspec
+augroup END
+
+" rst2html
+let g:quickrun_config['rst'] = {
+  \ 'command': 'rst2html.py',
+  \ 'outputter': 'browser',
+  \ }
+" }}} plugin quickrun
+
 " }}} ==== Plugins ====
