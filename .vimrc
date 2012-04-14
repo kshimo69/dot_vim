@@ -82,11 +82,17 @@ NeoBundle 'Lokaltog/vim-powerline'
 NeoBundle 'mattn/webapi-vim'
 NeoBundle 'mattn/mkdpreview-vim'
 "NeoBundle 'tyru/open-browser.vim'
+" ColorScheme
+NeoBundle 'desert256.vim'
+NeoBundle 'tomasr/molokai'
+NeoBundle 'xoria256.vim'
 " Doc
 NeoBundle 'Shougo/echodoc.git'
 "NeoBundle 'thinca/vim-ref'
-" Project
+" Project, Explorer
 "NeoBundle 'project.tar.gz'
+"NeoBundle 'scrooloose/nerdtree'
+"NeoBundle 'vtreeexplorer'
 " Tags
 "NeoBundle 'taglist.vim'  " require: http://ctags.sourceforge.net/
 "NeoBundle 'Source-Explorer-srcexpl.vim'  " 使うかな？
@@ -219,7 +225,7 @@ if has('gui_macvim')
 endif
 " GUI end }}}
 
-colorscheme koehler
+colorscheme xoria256
 
 " }}} View
 
