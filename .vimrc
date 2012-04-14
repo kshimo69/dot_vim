@@ -295,5 +295,5 @@ let g:neocomplcache_omni_patterns.cpp = '\h\w*\%(\.\|->\)\h\w*\|\h\w*::'
 
 " plugin matchit {{{
 source $VIMRUNTIME/macros/matchit.vim
-let b:match_words = &matchpairs . '<if>:<else>,<if>:<elif>,<begin>:<end>'
+"let b:match_words = &matchpairs . '\<if\>:\<else\>,\<if\>:\<elif\>,\<begin\>:\<end\>'
 " }}} plugin matchit
