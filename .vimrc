@@ -90,6 +90,8 @@ NeoBundle 'Shougo/echodoc.git'
 "NeoBundle 'kana/vim-smartchr'
 " Project
 "NeoBundle 'project.tar.gz'
+" Python
+NeoBundle 'python_match.vim'
 " Rails
 "NeoBundle 'tpope/vim-rails'
 
