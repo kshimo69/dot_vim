@@ -73,12 +73,11 @@ NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'scrooloose/nerdcommenter'
 " Status Line
 NeoBundle 'Lokaltog/vim-powerline'
-" Yank
+" Utils
 "NeoBundle 'YankRing.vim'
-" Align
 "NeoBundle 'Align'
-" Surround
 "NeoBundle 'tpope/vim-surround'
+"NeoBundle 'kana/vim-smartchr'
 " Web
 NeoBundle 'mattn/webapi-vim'
 NeoBundle 'mattn/mkdpreview-vim'
@@ -86,8 +85,6 @@ NeoBundle 'mattn/mkdpreview-vim'
 " Doc
 NeoBundle 'Shougo/echodoc.git'
 "NeoBundle 'thinca/vim-ref'
-" Input
-"NeoBundle 'kana/vim-smartchr'
 " Project
 "NeoBundle 'project.tar.gz'
 " Python
