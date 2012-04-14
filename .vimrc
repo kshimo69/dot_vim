@@ -1,7 +1,7 @@
 " vim:set foldmethod=marker foldlevel=0:
 " .vimrc
 
-" plugin neovundle {{{
+" plugin neobundle {{{
 set nocompatible
 filetype off
 
@@ -59,9 +59,15 @@ NeoBundle 'Shougo/neocomplcache-clang'
 NeoBundle 'Shougo/neocomplcache-snippets-complete'
 " Unite
 NeoBundle 'Shougo/unite.vim'
+NeoBundle 'tsukkee/unite-help'
 NeoBundle 'h1mesuke/unite-outline'
 NeoBundle 'Shougo/unite-build'
 NeoBundle 'tsukkee/unite-tag'
+NeoBundle 'Sixeight/unite-grep'
+NeoBundle 'basyura/unite-rails'
+NeoBundle 'thinca/vim-unite-history'
+NeoBundle 'thinca/vim-openbuf'
+NeoBundle 'choplin/unite-vim_hacks'
 "NeoBundle 'Shougo/vimfiler'
 " vimproc
 NeoBundle 'Shougo/vimproc'
@@ -108,7 +114,8 @@ NeoBundle 'python_match.vim'
 "NeoBundle 'jQuery'
 " Markdown
 "NeoBundle 'tpope/vim-markdown'
-"
+
+NeoBundle 'Shougo/neobundle.vim'
 
 filetype plugin indent on
 " }}} plugin neobundle
