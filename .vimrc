@@ -337,7 +337,7 @@ nnoremap <silent> ,ur :<C-u>Unite -buffer-name=register register -direction=botr
 nnoremap <silent> ,um :<C-u>Unite file_mru -direction=botright -auto-resize -toggle<CR>
 " 常用セット
 nnoremap <silent> ,uu :<C-u>Unite buffer file_mru file file/new -direction=botright -auto-resize -toggle<CR>
-nnoremap <silent> ;; :<C-u>Unite buffer file_mru file file/new -direction=botright -auto-resize -toggle<CR>
+nnoremap <silent> ;; :<C-u>Unite buffer file_mru file file/new -direction=botright -auto-preview -toggle<CR>
 " 全部乗せ
 nnoremap <silent> ,ua :<C-u>UniteWithBufferDir -buffer-name=files buffer file_mru bookmark file file/new -direction=botright -auto-resize -toggle<CR>
 
@@ -373,5 +373,16 @@ function! s:unite_source.gather_candidates(args, context)
     \ }')
 endfunction
 call unite#define_source(s:unite_source)
+
+" http://d.hatena.ne.jp/ruedap/20110117/vim_unite_plugin_1_week
+" unite.vim上でのキーマッピング
+autocmd FileType unite call s:unite_my_settings()
+function! s:unite_my_settings()
+  " 単語単位からパス単位で削除するように変更
+  "imap <buffer> <C-w> <Plug>(unite_delete_backward_path)
+  " ESCキーを2回押すと終了する
+  nmap <silent><buffer> <ESC><ESC> q
+  imap <silent><buffer> <ESC><ESC> <ESC>q
+endfunction
 " }}} plugin unite
 
