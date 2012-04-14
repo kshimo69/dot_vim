@@ -299,3 +299,57 @@ let g:neocomplcache_omni_patterns.cpp = '\h\w*\%(\.\|->\)\h\w*\|\h\w*::'
 source $VIMRUNTIME/macros/matchit.vim
 "let b:match_words = &matchpairs . '\<if\>:\<else\>,\<if\>:\<elif\>,\<begin\>:\<end\>'
 " }}} plugin matchit
+
+" plugin unite {{{
+" http://d.hatena.ne.jp/ruedap/20110110/vim_unite_plugin
+" http://d.hatena.ne.jp/Voluntas/20110823/1314031095
+" 入力モードで開始する
+" let g:unite_enable_start_insert=1
+" バッファ一覧
+nnoremap <silent> ,ub :<C-u>Unite buffer -direction=botright -auto-resize -toggle<CR>
+" ファイル一覧
+nnoremap <silent> ,uf :<C-u>UniteWithBufferDir -buffer-name=files file -direction=botright -auto-resize -toggle<CR>
+" レジスタ一覧
+nnoremap <silent> ,ur :<C-u>Unite -buffer-name=register register -direction=botright -auto-resize -toggle<CR>
+" 最近使用したファイル一覧
+nnoremap <silent> ,um :<C-u>Unite file_mru -direction=botright -auto-resize -toggle<CR>
+" 常用セット
+nnoremap <silent> ,uu :<C-u>Unite buffer file_mru -direction=botright -auto-resize -toggle<CR>
+nnoremap <silent> ;; :<C-u>Unite buffer file_mru -direction=botright -auto-resize -toggle<CR>
+" 全部乗せ
+nnoremap <silent> ,ua :<C-u>UniteWithBufferDir -buffer-name=files buffer file_mru bookmark file -direction=botright -auto-resize -toggle<CR>
+
+" ウィンドウを分割して開く
+au FileType unite nnoremap <silent> <buffer> <expr> <C-j> unite#do_action('split')
+au FileType unite inoremap <silent> <buffer> <expr> <C-j> unite#do_action('split')
+" ウィンドウを縦に分割して開く
+au FileType unite nnoremap <silent> <buffer> <expr> <C-l> unite#do_action('vsplit')
+au FileType unite inoremap <silent> <buffer> <expr> <C-l> unite#do_action('vsplit')
+
+" http://ujihisa.blogspot.com/2010/12/investing-methods-of-object-on-unite.html
+" Unite evalruby
+let s:unite_source = {
+  \ 'name': 'evalruby',
+  \ 'is_volatile': 1,
+  \ 'required_pattern_length': 1,
+  \ 'max_candidates': 30,
+  \ }
+function! s:unite_source.gather_candidates(args, context)
+  if a:context.input[-1:] == '.'
+    let methods = split(
+      \ unite#util#system(printf('ruby -e "puts %s.methods"', a:context.input[:-2])),
+      \ "\n")
+    call map(methods, printf("'%s' . v:val", a:context.input))
+  else
+    let methods = [a:context.input]
+  endif
+  return map(methods, '{
+    \ "word": v:val,
+    \ "source": "evalruby",
+    \ "kind": "command",
+    \ "action__command": printf("!ruby -e \"p %s\"", v:val),
+    \ }')
+endfunction
+call unite#define_source(s:unite_source)
+" }}} plugin unite
+
