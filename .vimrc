@@ -52,24 +52,46 @@ endif
 " --------------------------------
 " git wrapper
 NeoBundle 'tpope/vim-fugitive'
-" 補完
+"NeoBundle 'Shougo/vim-vcs'
+" Auto Complete
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/neocomplcache-clang'
-" unite
+NeoBundle 'Shougo/neocomplcache-snippets-complete'
+" Unite
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'h1mesuke/unite-outline'
 NeoBundle 'Shougo/unite-build'
 NeoBundle 'tsukkee/unite-tag'
+"NeoBundle 'Shougo/vimfiler'
 " vimproc
 NeoBundle 'Shougo/vimproc'
 " vimshell
 NeoBundle 'Shougo/vimshell'
 " quickrun
 NeoBundle 'thinca/vim-quickrun'
-" コメントをトグルするやつ
+" Comment
 NeoBundle 'scrooloose/nerdcommenter'
-" status lineをいい感じにするやつ
+" Status Line
 NeoBundle 'Lokaltog/vim-powerline'
+" Yank
+"NeoBundle 'YankRing.vim'
+" Align
+"NeoBundle 'Align'
+" Surround
+"NeoBundle 'tpope/vim-surround'
+" Web
+"NeoBundle 'mattn/webapi-vim'
+"NeoBundle 'mattn/mkdpreview-vim'
+"NeoBundle 'tyru/open-browser.vim'
+" Doc
+"NeoBundle 'Shougo/echodoc.git'
+"NeoBundle 'thinca/vim-ref'
+" Input
+"NeoBundle 'kana/vim-smartchr'
+" Project
+"NeoBundle 'project.tar.gz'
+" Rails
+"NeoBundle 'tpope/vim-rails'
 
 filetype plugin indent on
 " }}} plugin neobundle
