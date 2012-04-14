@@ -84,7 +84,7 @@ NeoBundle 'Lokaltog/vim-powerline'
 "NeoBundle 'mattn/mkdpreview-vim'
 "NeoBundle 'tyru/open-browser.vim'
 " Doc
-"NeoBundle 'Shougo/echodoc.git'
+NeoBundle 'Shougo/echodoc.git'
 "NeoBundle 'thinca/vim-ref'
 " Input
 "NeoBundle 'kana/vim-smartchr'
@@ -144,6 +144,11 @@ vmap ,, <Plug>NERDCommenterToggle
 "nnoremap <Space>gC :<C-u>Git commit --amend<Enter>
 "nnoremap <Space>gb :<C-u>Gblame<Enter>
 " }}} plugin vim-fugitive
+
+" plugin echodoc {{{
+" 自動的に有効
+let g:echodoc_enable_at_startup = 1
+" }}} plugin echodoc
 
 syntax on
 filetype plugin indent on
