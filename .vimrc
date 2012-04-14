@@ -96,6 +96,13 @@ NeoBundle 'python_match.vim'
 "NeoBundle 'tpope/vim-rails'
 " SQL
 "NeoBundle 'SQLUtilities'
+" Javascript
+"NeoBundle 'JavaScript-syntax'
+" JQuery
+"NeoBundle 'jQuery'
+" Markdown
+"NeoBundle 'tpope/vim-markdown'
+"
 
 filetype plugin indent on
 " }}} plugin neobundle
