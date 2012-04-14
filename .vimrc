@@ -131,6 +131,7 @@ let g:Powerline_stl_path_style = "short"
 " plugin nerdcommenter {{{
 let NERDSpaceDelims = 1
 let NERDDefaultNesting = 0
+" ,,でコメントをトグルする
 nmap ,, <Plug>NERDCommenterToggle
 vmap ,, <Plug>NERDCommenterToggle
 " }}} plugin nerdcommenter
