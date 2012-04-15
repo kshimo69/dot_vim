@@ -104,7 +104,7 @@ NeoBundle 'project.tar.gz'
 "NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'vtreeexplorer'
 " Tags
-"NeoBundle 'taglist.vim'  " require: http://ctags.sourceforge.net/
+NeoBundle 'taglist.vim'  " require: http://ctags.sourceforge.net/
 "NeoBundle 'Source-Explorer-srcexpl.vim'  " 使うかな？
 " Python
 NeoBundle 'python_match.vim'
