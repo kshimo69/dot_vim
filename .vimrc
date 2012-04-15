@@ -83,7 +83,7 @@ NeoBundle 'Lokaltog/vim-powerline'
 NeoBundle 'YankRing.vim'
 NeoBundle 'Align'
 NeoBundle 'tpope/vim-surround'
-"NeoBundle 'kana/vim-smartchr'
+NeoBundle 'kana/vim-smartchr'
 " Web
 NeoBundle 'mattn/webapi-vim'
 NeoBundle 'mattn/mkdpreview-vim'
@@ -770,5 +770,12 @@ nnoremap <silent> cy  ce<C-r>0<ESC>:let@/=@1<CR>:noh<CR>
 vnoremap <silent> cy  c<C-r>0<ESC>:let@/=@1<CR>:noh<CR>
 nnoremap <silent> ciy ciw<C-r>0<ESC>:let@/=@1<CR>:noh<CR>
 " }}} plugin yankring
+
+" plugin smartchr {{{
+inoremap <expr> = smartchr#loop(' = ', '=', ' == ')
+inoremap <expr> , smartchr#one_of(', ', ',')
+cnoremap <expr> / smartchr#loop('/', '~/', '//', {'ctype': ':'}
+autocmd FileType c,cpp inoremap <buffer> <expr> . smartchr#loop('.', '->', '...')
+" }}} plugin smartchr
 
 " }}} ==== Plugins ====
