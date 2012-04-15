@@ -293,7 +293,7 @@ augroup cch
   autocmd WinLeave * set nocursorline
   autocmd WinEnter,BufRead * set cursorline
 augroup END
-hi clear CursorLine
+"hi clear CursorLine
 "hi CursorLine gui=underline
 "highlight CursorLine ctermbg=blue guibg=grey20
 " Change cursor color when IME on/off
