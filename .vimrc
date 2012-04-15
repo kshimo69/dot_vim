@@ -303,6 +303,22 @@ endif
 
 " }}} View
 
+" Search {{{
+set ignorecase
+set smartcase
+set incsearch
+set wrapscan
+set hlsearch
+" cancel highlight search
+nmap <ESC><ESC> :nohlsearch<CR><ESC>
+" search help under cursor keyword
+nnoremap <C-h> :<C-u>help<Space><C-r><C-w><Enter>
+
+" grep
+"set grepformat=%f:%l:%m,%f:%l%m,%f\ \ %l%m,%f
+"set grepprg=grep\ -nh
+" }}} Search
+
 " }}} ==== General ====
 
 " ==== Programming ==== {{{
