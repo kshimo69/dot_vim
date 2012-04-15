@@ -374,6 +374,31 @@ endfunction
 set guitablabel=%N:\ %{GuiTabLabel()}
 " }}} Tab
 
+" Buffer {{{
+" nmap <silent> <C-x><C-n> :bnext<CR>
+" nmap <silent> <C-x><C-p> :bprevious<CR>
+" nmap <silent> <C-x><C-l> :buffers<CR>
+" show serach result middle of buffer
+nmap n nzz
+nmap N Nzz
+nmap * *zz
+nmap # #zz
+nmap g* g*zz
+nmap g# g#zz
+nmap G Gzz
+" split
+nmap spj <SID>(split-to-j)
+nmap spk <SID>(split-to-k)
+nmap sph <SID>(split-to-h)
+nmap spl <SID>(split-to-l)
+nnoremap <SID>(split-to-j) : <C-u>belowright split<CR>
+nnoremap <SID>(split-to-k) : <C-u>aboveleft split<CR>
+nnoremap <SID>(split-to-h) : <C-u>topleft vsplit<CR>
+nnoremap <SID>(split-to-l) : <C-u>botright vsplit<CR>
+" scroll top window with key Ctrl+Shift+J
+nnoremap <C-S-J> <C-W>k<C-E><C-W><C-W>
+" }}} Buffer
+
 " }}} ==== General ====
 
 " ==== Programming ==== {{{
