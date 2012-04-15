@@ -102,7 +102,7 @@ NeoBundle 'glidenote/memolist.vim'
 " Project, Explorer
 NeoBundle 'project.tar.gz'
 "NeoBundle 'scrooloose/nerdtree'
-"NeoBundle 'vtreeexplorer'
+NeoBundle 'vtreeexplorer'
 " Tags
 "NeoBundle 'taglist.vim'  " require: http://ctags.sourceforge.net/
 "NeoBundle 'Source-Explorer-srcexpl.vim'  " 使うかな？
@@ -804,5 +804,10 @@ let g:memolist_qfixgrep  =  1
 let g:memolist_vimfiler  =  1
 " let g:memolist_template_dir_path  =  "path/to/dir"
 " }}} plugin memolist
+
+" plugin vtreeexplorer {{{
+map <F10> :VSTreeExplore <CR>
+let g:treeExplVertical = 1
+" }}} plugin vtreeexplorer
 
 " }}} ==== Plugins ====
