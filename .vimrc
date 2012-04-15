@@ -84,6 +84,7 @@ NeoBundle 'YankRing.vim'
 NeoBundle 'Align'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'kana/vim-smartchr'
+NeoBundle 'fuenor/qfixgrep.git'
 " Web
 NeoBundle 'mattn/webapi-vim'
 NeoBundle 'mattn/mkdpreview-vim'
@@ -97,6 +98,7 @@ NeoBundle 'xoria256.vim'
 " Doc
 NeoBundle 'Shougo/echodoc.git'
 NeoBundle 'thinca/vim-ref'
+NeoBundle 'glidenote/memolist.vim'
 " Project, Explorer
 NeoBundle 'project.tar.gz'
 "NeoBundle 'scrooloose/nerdtree'
@@ -787,5 +789,20 @@ inoremap <expr> , smartchr#one_of(', ', ',')
 cnoremap <expr> / smartchr#loop('/', '~/', '//', {'ctype': ':'}
 autocmd FileType c,cpp inoremap <buffer> <expr> . smartchr#loop('.', '->', '...')
 " }}} plugin smartchr
+
+" plugin memolist {{{
+map <Leader>mn  :MemoNew<CR>
+map <Leader>ml  :MemoList<CR>
+map <Leader>mg  :MemoGrep<CR>
+let g:memolist_memo_suffix  =  "rst"
+let g:memolist_memo_date  =  "%Y-%m-%d %H:%M"
+let g:memolist_memo_date  =  "epoch"
+let g:memolist_memo_date  =  "%D %T"
+let g:memolist_prompt_tags  =  1
+let g:memolist_prompt_categories  =  1
+let g:memolist_qfixgrep  =  1
+let g:memolist_vimfiler  =  1
+" let g:memolist_template_dir_path  =  "path/to/dir"
+" }}} plugin memolist
 
 " }}} ==== Plugins ====
