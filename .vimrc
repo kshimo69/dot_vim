@@ -319,6 +319,16 @@ nnoremap <C-h> :<C-u>help<Space><C-r><C-w><Enter>
 "set grepprg=grep\ -nh
 " }}} Search
 
+" Keymap {{{
+nnoremap j gj
+nnoremap k gk
+" nnoremap <Space> jzz
+" nnoremap <S-Space> kzz
+nnoremap Y y$
+nnoremap ¥ \
+inoremap ¥ \
+" }}} Keymap
+
 " }}} ==== General ====
 
 " ==== Programming ==== {{{
