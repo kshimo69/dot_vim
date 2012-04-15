@@ -80,7 +80,7 @@ NeoBundle 'scrooloose/nerdcommenter'
 " Status Line
 NeoBundle 'Lokaltog/vim-powerline'
 " Utils
-"NeoBundle 'YankRing.vim'
+NeoBundle 'YankRing.vim'
 NeoBundle 'Align'
 "NeoBundle 'tpope/vim-surround'
 "NeoBundle 'kana/vim-smartchr'
