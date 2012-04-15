@@ -194,6 +194,12 @@ colorscheme xoria256
 
 " ==== Programming ==== {{{
 
+" ChangeLog {{{
+let g:changelog_username = "Kimihiko Shimomura  <kshimo69@gmail.com>"
+let g:changelog_dateformat = "%Y-%m-%d (%a)"
+"nmap <C-m> :e ~/Dropbox/ChangeLog.txt<CR>
+" }}} ChangeLog
+
 " Sukicolle {{{
 augroup sukicolleroot
   autocmd!
