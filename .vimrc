@@ -88,6 +88,7 @@ NeoBundle 'kana/vim-smartchr'
 NeoBundle 'mattn/webapi-vim'
 NeoBundle 'mattn/mkdpreview-vim'
 NeoBundle 'tyru/open-browser.vim'
+"NeoBundle 'glidenote/octoeditor.vim'
 " ColorScheme
 NeoBundle 'desert256.vim'
 NeoBundle 'tomasr/molokai'
