@@ -645,6 +645,10 @@ let g:neocomplcache_omni_patterns.c = '\%(\.\|->\)\h\w*'
 let g:neocomplcache_omni_patterns.cpp = '\h\w*\%(\.\|->\)\h\w*\|\h\w*::'
 " }}} plugin neocomplcache
 
+" plugin vimshell {{{
+command! VS :VimShell
+" }}} plugin vimshel
+
 " plugin matchit {{{
 source $VIMRUNTIME/macros/matchit.vim
 "let b:match_words = &matchpairs . '\<if\>:\<else\>,\<if\>:\<elif\>,\<begin\>:\<end\>'
