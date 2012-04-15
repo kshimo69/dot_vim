@@ -399,6 +399,21 @@ nnoremap <SID>(split-to-l) : <C-u>botright vsplit<CR>
 nnoremap <C-S-J> <C-W>k<C-E><C-W><C-W>
 " }}} Buffer
 
+" Remember cursor potition {{{
+" autocmd BufReadPost *
+  " \ if line("'\"") > 0 && line ("'\"") <= line("$") |
+  " \     exe "normal! g'\"" |
+  " \ let b:posBufReadPost = getpos('.') |
+  " \ endif
+" autocmd BufWinEnter *
+  " \ if exists('b:posBufReadPost') |
+  " \     if b:posBufReadPost == getpos('.') |
+  " \     execute 'normal! zvzz' |
+  " \     endif |
+  " \ unlet b:posBufReadPost |
+  " \ endif
+" }}} Remember cursor potition
+
 " }}} ==== General ====
 
 " ==== Programming ==== {{{
