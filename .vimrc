@@ -109,7 +109,7 @@ NeoBundle 'taglist.vim'  " require: http://ctags.sourceforge.net/
 " Python
 NeoBundle 'python_match.vim'
 " Rails
-"NeoBundle 'tpope/vim-rails'
+NeoBundle 'tpope/vim-rails'
 " SQL
 NeoBundle 'SQLUtilities'
 " Javascript
