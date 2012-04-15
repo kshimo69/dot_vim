@@ -82,7 +82,7 @@ NeoBundle 'Lokaltog/vim-powerline'
 " Utils
 NeoBundle 'YankRing.vim'
 NeoBundle 'Align'
-"NeoBundle 'tpope/vim-surround'
+NeoBundle 'tpope/vim-surround'
 "NeoBundle 'kana/vim-smartchr'
 " Web
 NeoBundle 'mattn/webapi-vim'
