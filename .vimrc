@@ -655,6 +655,8 @@ source $VIMRUNTIME/macros/matchit.vim
 " http://d.hatena.ne.jp/Voluntas/20110823/1314031095
 " 入力モードで開始する
 let g:unite_enable_start_insert=1
+" uniteのウインドウの高さ
+let g:unite_winheight=15
 " バッファ一覧
 nnoremap <silent> ,ub :<C-u>Unite buffer -direction=botright -auto-resize -toggle<CR>
 " ファイル一覧
