@@ -194,6 +194,17 @@ colorscheme xoria256
 
 " ==== Programming ==== {{{
 
+" Templete {{{
+augroup templeteload
+  autocmd!
+  autocmd BufNewFile *.c 0r ~/.vim/autoinsert/c.c
+  autocmd BufNewFile *.pl 0r ~/.vim/autoinsert/perl.pl
+  autocmd BufNewFile *.py 0r ~/.vim/autoinsert/python.py
+  autocmd BufNewFile *.rb 0r ~/.vim/autoinsert/ruby.rb
+  autocmd BufNewFile *.rst 0r ~/.vim/autoinsert/rst.rst
+augroup END
+" }}} Templete
+
 " ChangeLog {{{
 let g:changelog_username = "Kimihiko Shimomura  <kshimo69@gmail.com>"
 let g:changelog_dateformat = "%Y-%m-%d (%a)"
