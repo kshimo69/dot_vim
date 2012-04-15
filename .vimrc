@@ -520,4 +520,12 @@ let g:Align_xstrlen = 3
 let g:DrChipTopLvlMenu = 'Align'
 " }}} plugin Align
 
+" plugin yankring {{{
+let g:yankring_history_dir = expand('$HOME')
+let g:yankring_history_file = '.yankring_history'
+nnoremap <silent> cy  ce<C-r>0<ESC>:let@/=@1<CR>:noh<CR>
+vnoremap <silent> cy  c<C-r>0<ESC>:let@/=@1<CR>:noh<CR>
+nnoremap <silent> ciy ciw<C-r>0<ESC>:let@/=@1<CR>:noh<CR>
+" }}} plugin yankring
+
 " }}} ==== Plugins ====
