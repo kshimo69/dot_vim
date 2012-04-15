@@ -120,6 +120,9 @@ NeoBundle 'Shougo/neobundle.vim'
 filetype plugin indent on
 " }}} plugin neobundle
 
+" ==== General ==== {{{
+
+" Basic {{{
 "Windows, unixでのruntimepathの違いを吸収するためのもの。
 "$MY_VIMRUNTIMEはユーザーランタイムディレクトリを示す。
 ":echo $MY_VIMRUNTIMEで実際のパスを確認できます。
@@ -131,21 +134,88 @@ elseif isdirectory($VIM . '\vimfiles')
   let $MY_VIMRUNTIME = $VIM.'\vimfiles'
 endif
 
-syntax on
-filetype plugin indent on
+"let $PATH = '/opt/local/bin:/opt/local/sbin:' . $PATH
+" use modeline
+set modeline
+" no auto return when column has so long
+set textwidth=0
+" not create backup files
+set nobackup
+"" not create swap files
+"set noswapfile
+"" it can change buffer when buffer don't save
+"set hidden
+" auto read when file was overwrited
+set autoread
+" remove any character <BS> key
+set backspace=indent,eol,start
+" no beep
+set vb
+set t_vb=
+" show command
+set showcmd
+" expand command
+set wildmenu
+" start expand with <TAB>
+set wildchar=<tab>
+" display type: list
+set wildmode=list:full
+" command history
+set history=1000
+"" fold with indent
+"set foldmethod=indent
+"" all level folding
+"set foldlevel=0
+"" all level not folding when open buffer
+"set foldlevel=99
+"" show folding line
+"set foldcolumn=4
+
+" tab set 4 spaces
 set tabstop=4 shiftwidth=4 softtabstop=4
-set smarttab
+" TAB expand SPACE
 set expandtab
+set smarttab
+" highlight bracket
+set showmatch
+" rect select
+" http://vim-users.jp/2010/02/hack125/
+set virtualedit&
+set virtualedit+=block
+"set background=dark
+"set autoindent
+"set smartindent
+"set cindent
+set nrformats&
+set nrformats-=octal
 set ffs=unix,dos,mac  " return code
-set encoding=utf-8  " default encoding
+"if !(has("win32") || has("win95") || has("win64") || has("win16"))
+  set encoding=utf-8  " default encoding
+"endif
 set fileencodings=utf-8,ucs-bom,iso-2022-jp-3,iso-2022-jp,eucjp-ms,euc-jisx0213,euc-jp,sjis,cp932
 nmap ,ee :e ++enc=euc-jp<CR>
 nmap ,es :e ++enc=cp932<CR>
 nmap ,ej :e ++enc=iso-2022-jp<CR>
 nmap ,eu :e ++enc=utf-8<CR>
 
+" Reset Japanese input
+au BufNewFile,BufRead * set iminsert=0
 " モード変更時にIMEをoffにする設定
 set imdisable
+"" Tab reset
+"au BufNewFile,BufRead * set tabstop=4 shiftwidth=4 softtabstop=4
+" Show zenkaku space
+highlight ZenkakuSpace cterm=underline ctermfg=lightblue guibg=#666666
+au BufNewFile,BufRead * match ZenkakuSpace /　/
+
+" clipboard
+set clipboard+=unnamed,autoselect
+" }}} Basic
+
+" }}} ==== General ====
+
+syntax on
+filetype plugin indent on
 
 " View {{{
 
