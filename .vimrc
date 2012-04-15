@@ -719,8 +719,12 @@ endfunction
 " plugin open-browser {{{
 " http://vim-users.jp/2011/08/hack225/
 let g:netrw_nogx = 1 " disable netrw's gx mapping.
+" カーソル下のURLをブラウザで開く
 nmap gx <Plug>(openbrowser-smart-search)
 vmap gx <Plug>(openbrowser-smart-search)
+" カーソル下のキーワードをググる
+nnoremap go :<C-u>OpenBrowserSearch<Space><C-r><C-w><Enter>
+vnoremap go :<C-u>OpenBrowserSearch<Space><C-r><C-w><Enter>
 " }}} plugin open-browser
 
 " plugin echodoc {{{
