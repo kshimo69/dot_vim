@@ -68,7 +68,7 @@ NeoBundle 'basyura/unite-rails'
 NeoBundle 'thinca/vim-unite-history'
 NeoBundle 'thinca/vim-openbuf'
 NeoBundle 'kshimo69/unite-vim_hacks'
-"NeoBundle 'Shougo/vimfiler'
+NeoBundle 'Shougo/vimfiler'
 " vimproc
 NeoBundle 'Shougo/vimproc'
 " vimshell
@@ -96,7 +96,7 @@ NeoBundle 'tomasr/molokai'
 NeoBundle 'xoria256.vim'
 " Doc
 NeoBundle 'Shougo/echodoc.git'
-"NeoBundle 'thinca/vim-ref'
+NeoBundle 'thinca/vim-ref'
 " Project, Explorer
 NeoBundle 'project.tar.gz'
 "NeoBundle 'scrooloose/nerdtree'
@@ -109,13 +109,13 @@ NeoBundle 'python_match.vim'
 " Rails
 "NeoBundle 'tpope/vim-rails'
 " SQL
-"NeoBundle 'SQLUtilities'
+NeoBundle 'SQLUtilities'
 " Javascript
-"NeoBundle 'JavaScript-syntax'
+NeoBundle 'JavaScript-syntax'
 " JQuery
-"NeoBundle 'jQuery'
+NeoBundle 'jQuery'
 " Markdown
-"NeoBundle 'tpope/vim-markdown'
+NeoBundle 'tpope/vim-markdown'
 
 NeoBundle 'Shougo/neobundle.vim'
 
