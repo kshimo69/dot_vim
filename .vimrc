@@ -212,11 +212,6 @@ au BufNewFile,BufRead * match ZenkakuSpace /　/
 set clipboard+=unnamed,autoselect
 " }}} Basic
 
-" }}} ==== General ====
-
-syntax on
-filetype plugin indent on
-
 " View {{{
 
 " GUI {{{
@@ -258,9 +253,57 @@ if has('gui_macvim')
 endif
 " GUI end }}}
 
+" Statusline {{{
+" set laststatus=2
+" set statusline=%n\:%y%F\ %(\[%{GitBranch()}\]\ %)\|%{(&fenc!=''?&fenc:&enc).'\|'.&ff.'\|'}ascii\:\%03.3b\|hex\:\%02.2B\|%m%r%=<%v\:%l/%L:%p%%>
+" highlight StatusLine term=NONE cterm=NONE ctermfg=black ctermbg=white
+"highlight StatusLine gui=BOLD guifg=Black guibg=LightYellow
+" Change status line's color when into insert mode
+" augroup InsertHook
+  " autocmd!
+  " autocmd InsertEnter * highlight StatusLine guifg=White guibg=DarkCyan
+  " autocmd InsertLeave * highlight StatusLine guifg=Black guibg=LightYellow
+" augroup END
+" }}} Statusline
+
+" display line number
+set number
+set diffopt+=vertical
+" character when use 'set list'
+set listchars=eol:$,tab:>-,trail:_
+" display TAB and CR
+"set list
+" display full length space
+scriptencoding utf-8
+augroup highlightIdegraphicSpace
+  autocmd!
+  autocmd ColorScheme * highlight IdeographicSpace term=underline ctermbg=Red guibg=Red
+  autocmd VimEnter,WinEnter * match IdeographicSpace /　/
+augroup END
 colorscheme xoria256
+syntax on
+" highlight Folded ctermbg=grey ctermfg=blue guibg=grey guifg=blue
+" highlight FoldColumn ctermfg=green guifg=green
+set title
+set ruler
+set cursorline
+" display line on current buffer
+augroup cch
+  autocmd! cch
+  autocmd WinLeave * set nocursorline
+  autocmd WinEnter,BufRead * set cursorline
+augroup END
+hi clear CursorLine
+"hi CursorLine gui=underline
+"highlight CursorLine ctermbg=blue guibg=grey20
+" Change cursor color when IME on/off
+if has('multi_byte_ime') || has('xim')
+  highlight CursorIM guibg=LightRed guifg=NONE
+endif
 
 " }}} View
+
+" }}} ==== General ====
 
 " ==== Programming ==== {{{
 
