@@ -105,7 +105,7 @@ NeoBundle 'project.tar.gz'
 NeoBundle 'vtreeexplorer'
 " Tags
 NeoBundle 'taglist.vim'  " require: http://ctags.sourceforge.net/
-"NeoBundle 'Source-Explorer-srcexpl.vim'  " 使うかな？
+NeoBundle 'Source-Explorer-srcexpl.vim'  " 使うかな？
 " Python
 NeoBundle 'python_match.vim'
 " Rails
@@ -809,5 +809,17 @@ let g:memolist_vimfiler  =  1
 map <F10> :VSTreeExplore <CR>
 let g:treeExplVertical = 1
 " }}} plugin vtreeexplorer
+
+" plugin Source Explorer {{{
+" 自動でプレビューを表示する。
+let g:SrcExpl_RefreshTime = 1
+" プレビューウインドウの高さ
+" let g:SrcExpl_WinHeight = 9
+" tagsは自動で作成する
+let g:SrcExpl_UpdateTags = 1
+let g:SrcExpl_RefreshMapKey = "<Space>"
+let g:SrcExpl_GoBackMapKey = "<C-b>"
+map <F8> :SrcExplToggle <CR>
+" }}} Source Explorer
 
 " }}} ==== Plugins ====
