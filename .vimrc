@@ -105,7 +105,7 @@ NeoBundle 'project.tar.gz'
 NeoBundle 'vtreeexplorer'
 " Tags
 NeoBundle 'taglist.vim'  " require: http://ctags.sourceforge.net/
-NeoBundle 'Source-Explorer-srcexpl.vim'  " 使うかな？
+NeoBundle 'Source-Explorer-srcexpl.vim'
 " Python
 NeoBundle 'python_match.vim'
 " Rails
