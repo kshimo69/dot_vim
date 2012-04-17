@@ -91,6 +91,7 @@ NeoBundle 'mattn/mkdpreview-vim'
 NeoBundle 'tyru/open-browser.vim'
 "NeoBundle 'glidenote/octoeditor.vim'
 NeoBundle 'mattn/gist-vim'
+NeoBundle 'confluencewiki.vim'
 " ColorScheme
 NeoBundle 'desert256.vim'
 NeoBundle 'tomasr/molokai'
@@ -821,5 +822,12 @@ let g:SrcExpl_RefreshMapKey = "<Space>"
 let g:SrcExpl_GoBackMapKey = "<C-b>"
 map <F8> :SrcExplToggle <CR>
 " }}} Source Explorer
+
+" plugin confluencewiki {{{
+augroup confluencewikifile
+  autocmd!
+  autocmd BufWinEnter,BufNewFile *.wiki set filetype=confluencewiki
+augroup END
+" }}} plugin confluencewiki
 
 " }}} ==== Plugins ====
