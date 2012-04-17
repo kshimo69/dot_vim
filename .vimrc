@@ -206,7 +206,7 @@ nmap ,eu :e ++enc=utf-8<CR>
 " Reset Japanese input
 au BufNewFile,BufRead * set iminsert=0
 " モード変更時にIMEをoffにする設定
-set imdisable
+" set imdisable
 "" Tab reset
 "au BufNewFile,BufRead * set tabstop=4 shiftwidth=4 softtabstop=4
 " Show zenkaku space
