@@ -240,7 +240,7 @@ augroup END
 " View {{{
 
 " ターミナルでも256色
-set t_Co = 256
+set t_Co=256
 
 " GUI {{{
 if has('gui_running')
