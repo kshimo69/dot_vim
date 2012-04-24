@@ -110,6 +110,12 @@ NeoBundle 'Source-Explorer-srcexpl.vim'
 NeoBundle 'gtags.vim'
 " Python
 NeoBundle 'python_match.vim'
+" http://hashnote.net/2011/12/7/12/
+NeoBundle 'lambdalisue/vim-python-virtualenv'
+NeoBundle 'mitechie/pyflakes-pathogen'
+NeoBundle 'reinh/vim-makegreen'
+NeoBundle 'lambdalisue/nose.vim'
+NeoBundle 'sontek/rope-vim'
 " Rails
 NeoBundle 'tpope/vim-rails'
 " SQL
@@ -791,6 +797,7 @@ let g:DrChipTopLvlMenu = 'Align'
 " }}} plugin Align
 
 " plugin yankring {{{
+let g:yankring_manual_clipboard_check = 0
 let g:yankring_history_dir = expand('$HOME')
 let g:yankring_history_file = '.yankring_history'
 nnoremap <silent> cy  ce<C-r>0<ESC>:let@/=@1<CR>:noh<CR>
@@ -843,5 +850,9 @@ augroup confluencewikifile
   autocmd BufWinEnter,BufNewFile *.wiki set filetype=confluencewiki
 augroup END
 " }}} plugin confluencewiki
+
+" plugin pyflakes-pathgen {{{
+" let pyflakes_use_quickfix = 0
+" }}} plugin pyflakes-pathgen
 
 " }}} ==== Plugins ====
