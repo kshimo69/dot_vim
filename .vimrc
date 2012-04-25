@@ -108,6 +108,8 @@ NeoBundle 'vtreeexplorer'
 NeoBundle 'taglist.vim'  " require: http://ctags.sourceforge.net/
 NeoBundle 'Source-Explorer-srcexpl.vim'
 NeoBundle 'gtags.vim'
+" Syntaxcheck
+NeoBundle 'scrooloose/syntastic.git'
 " Python
 NeoBundle 'python_match.vim'
 " http://hashnote.net/2011/12/7/12/
@@ -857,5 +859,10 @@ augroup END
 " plugin pyflakes-pathgen {{{
 " let pyflakes_use_quickfix = 0
 " }}} plugin pyflakes-pathgen
+
+" plugin syntastic {{{
+let g:syntastic_enable_signs=1
+let g:syntastic_auto_loc_list=2
+" }}} plugin syntastic
 
 " }}} ==== Plugins ====
