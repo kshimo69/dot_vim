@@ -52,6 +52,7 @@ endif
 " --------------------------------
 " git wrapper
 NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'gregsexton/gitv.git'
 "NeoBundle 'Shougo/vim-vcs'
 " Auto Complete
 NeoBundle 'Shougo/neocomplcache'
