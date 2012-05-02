@@ -144,7 +144,8 @@ filetype plugin indent on
 ":echo $MY_VIMRUNTIMEで実際のパスを確認できます。
 if isdirectory($HOME . '/.vim')
   let $MY_VIMRUNTIME = $HOME.'/.vim'
-elseif isdirectory($HOME . '\vimfiles')
+" elseif isdirectory($HOME . '\vimfiles')
+elseif filereadable($HOME . '\vimfiles')
   let $MY_VIMRUNTIME = $HOME.'\vimfiles'
 elseif isdirectory($VIM . '\vimfiles')
   let $MY_VIMRUNTIME = $VIM.'\vimfiles'
