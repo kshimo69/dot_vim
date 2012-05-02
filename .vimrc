@@ -815,7 +815,7 @@ nnoremap <silent> ciy ciw<C-r>0<ESC>:let@/=@1<CR>:noh<CR>
 
 " plugin smartchr {{{
 inoremap <expr> = smartchr#loop('=', ' = ', ' == ')
-inoremap <expr> , smartchr#one_of(', ', ',')
+inoremap <expr> , smartchr#one_of(',', ', ')
 " cnoremap <expr> / smartchr#loop('/', '~/', '//', {'ctype': ':'}
 autocmd FileType c,cpp inoremap <buffer> <expr> . smartchr#loop('.', '->', '...')
 " }}} plugin smartchr
