@@ -840,6 +840,12 @@ map <F10> :VSTreeExplore <CR>
 let g:treeExplVertical = 1
 " }}} plugin vtreeexplorer
 
+" plugin taglist {{{
+" 現在編集中のファイルしか表示しない
+"let Tlist_Show_One_File = 1
+map <F9> :TlistToggle <CR>
+" }}} plugin taglist
+
 " plugin Source Explorer {{{
 " 自動でプレビューを表示する。
 let g:SrcExpl_RefreshTime = 1
