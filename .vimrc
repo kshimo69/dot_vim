@@ -461,6 +461,7 @@ if has("cscope") && filereadable("/usr/local/bin/cscope")
     cs add $CSCOPE_DB
   endif
   set csverb
+  " set cscopequickfix=s-,c-,d-,i-,t-,e-
 endif
 " }}} Cscope
 
@@ -493,6 +494,16 @@ augroup END
 " }}} Sukicolle
 
 " }}} ==== Programming ====
+
+" Ctags {{{
+" タグファイルはカレントディレクトリから上向きに検索
+set tags=./tags;
+" grepは再帰、行番号表示、バイナリファイルは見ない、ファイル名表示
+" .hgと.git、tagsは対象外
+set grepprg=grep\ -rnIH\ --color\ --exclude=\.hg\ --exclude=\.git\ --exclude=tags\ --exclude=GTAGS
+" (l以外で始まる)QuickFixコマンドの実行が終わったらQuickFixウインドウを開く
+autocmd QuickFixCmdPost [^l]* copen
+" }}} Ctags
 
 " ==== Functions ==== {{{
 
