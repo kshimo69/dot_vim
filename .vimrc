@@ -849,6 +849,7 @@ let g:memolist_vimfiler  =  1
 " plugin vtreeexplorer {{{
 map <F10> :VSTreeExplore <CR>
 let g:treeExplVertical = 1
+let g:treeExplWinSize = 30
 " }}} plugin vtreeexplorer
 
 " plugin taglist {{{
