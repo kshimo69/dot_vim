@@ -104,7 +104,7 @@ NeoBundle 'taka84u9/vim-ref-ri.git'
 NeoBundle 'glidenote/memolist.vim'
 " Project, Explorer
 NeoBundle 'project.tar.gz'
-"NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'vtreeexplorer'
 " Tags
 NeoBundle 'taglist.vim'  " require: http://ctags.sourceforge.net/
@@ -847,10 +847,14 @@ let g:memolist_vimfiler  =  1
 " }}} plugin memolist
 
 " plugin vtreeexplorer {{{
-map <F10> :VSTreeExplore <CR>
-let g:treeExplVertical = 1
-let g:treeExplWinSize = 30
+" map <F10> :VSTreeExplore <CR>
+" let g:treeExplVertical = 1
+" let g:treeExplWinSize = 30
 " }}} plugin vtreeexplorer
+
+" plugin nerdtree {{{
+map <F10> :NERDTreeToggle <CR>
+" }}} plugin nerdtree
 
 " plugin taglist {{{
 " 現在編集中のファイルしか表示しない
