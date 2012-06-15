@@ -304,9 +304,10 @@ set number
 set diffopt+=vertical
 " character when use 'set list'
 " set listchars=eol:$,tab:>-,trail:_
-set listchars=eol:¬,tab:▸.
+" set listchars=eol:¬,tab:▸.
+set listchars=tab:▸␣,trail:␣
 " display TAB and CR
-"set list
+set list
 " display full length space
 scriptencoding utf-8
 augroup highlightIdegraphicSpace
