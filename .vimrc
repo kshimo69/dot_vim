@@ -303,7 +303,8 @@ endif
 set number
 set diffopt+=vertical
 " character when use 'set list'
-set listchars=eol:$,tab:>-,trail:_
+" set listchars=eol:$,tab:>-,trail:_
+set listchars=eol:¬,tab:▸.
 " display TAB and CR
 "set list
 " display full length space
