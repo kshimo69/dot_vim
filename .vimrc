@@ -792,6 +792,13 @@ let g:echodoc_enable_at_startup = 1
 
 " plugin quickrun {{{
 let g:quickrun_config = {}
+let g:quickrun_config = {
+\ "cpp/g++-preprocessor" : {
+\   "exec"    : "%c %o %s:p",
+\   "command" : "g++",
+\   "cmdopt"  : " -P -E -std=gnu++0x",
+\ },
+\}
 
 " RSpec
 let g:quickrun_config['ruby.rspec'] = {'command': 'spec'}
