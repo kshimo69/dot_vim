@@ -712,7 +712,7 @@ source $VIMRUNTIME/macros/matchit.vim
 " http://d.hatena.ne.jp/ruedap/20110110/vim_unite_plugin
 " http://d.hatena.ne.jp/Voluntas/20110823/1314031095
 " 入力モードで開始する
-" let g:unite_enable_start_insert=1
+let g:unite_enable_start_insert=1
 " uniteのウインドウの高さ
 let g:unite_winheight=15
 " バッファ一覧
