@@ -715,6 +715,8 @@ source $VIMRUNTIME/macros/matchit.vim
 let g:unite_enable_start_insert=1
 " uniteのウインドウの高さ
 let g:unite_winheight=15
+"file_mruの表示フォーマットを指定。空にすると表示スピードが高速化される
+let g:unite_source_file_mru_filename_format = ''
 " バッファ一覧
 nnoremap <silent> ,ub :<C-u>Unite buffer -direction=botright -auto-resize -toggle<CR>
 " ファイル一覧
@@ -771,6 +773,8 @@ function! s:unite_my_settings()
   " ESCキーを2回押すと終了する
   nmap <silent><buffer> <ESC><ESC> q
   imap <silent><buffer> <ESC><ESC> <ESC>q
+  "入力モードのときjjでノーマルモードに移動
+  imap <buffer> jj <Plug>(unite_insert_leave)
 endfunction
 " }}} plugin unite
 
