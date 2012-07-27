@@ -76,6 +76,7 @@ NeoBundle 'Shougo/vimproc'
 NeoBundle 'Shougo/vimshell'
 " quickrun
 NeoBundle 'thinca/vim-quickrun'
+NeoBundle 'osyo-manga/quickrun-hook-u-nya-'
 " Comment
 NeoBundle 'scrooloose/nerdcommenter'
 " Status Line
@@ -817,6 +818,13 @@ let g:quickrun_config['rst'] = {
   \ 'command': 'rst2html.py',
   \ 'outputter': 'browser',
   \ }
+
+" u-nya-
+" 使用しない場合は 0 にする
+let g:quickrun_config._ = {
+  \ "hook/u_nya_/enable" : 1,
+\ }
+
 " }}} plugin quickrun
 
 " plugin project {{{
