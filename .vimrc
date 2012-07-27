@@ -514,6 +514,12 @@ set grepprg=grep\ -rnIH\ --color\ --exclude=\.hg\ --exclude=\.git\ --exclude=tag
 autocmd QuickFixCmdPost [^l]* copen
 " }}} Ctags
 
+" IncludePATH {{{
+" PATHにインクルードディレクトリを設定する
+let $DEFAULT_INCLUDE_DIR = "/usr/include"
+set path+=$DEFAULT_INCLUDE_DIR
+" }}} IncludePATH
+
 " }}} ==== Programming ====
 
 " ==== Functions ==== {{{
