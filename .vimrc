@@ -504,8 +504,6 @@ augroup sukicolleroot
 augroup END
 " }}} Sukicolle
 
-" }}} ==== Programming ====
-
 " Ctags {{{
 " タグファイルはカレントディレクトリから上向きに検索
 set tags=./tags;
@@ -515,6 +513,8 @@ set grepprg=grep\ -rnIH\ --color\ --exclude=\.hg\ --exclude=\.git\ --exclude=tag
 " (l以外で始まる)QuickFixコマンドの実行が終わったらQuickFixウインドウを開く
 autocmd QuickFixCmdPost [^l]* copen
 " }}} Ctags
+
+" }}} ==== Programming ====
 
 " ==== Functions ==== {{{
 
