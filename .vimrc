@@ -894,6 +894,10 @@ map <F10> :NERDTreeToggle <CR>
 " plugin taglist {{{
 " 現在編集中のファイルしか表示しない
 "let Tlist_Show_One_File = 1
+" 右側に表示する
+let Tlist_Use_Right_Window = 1
+" 表示幅
+let Tlist_WinWidth = 45
 map <F9> :TlistToggle <CR>
 " }}} plugin taglist
 
