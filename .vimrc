@@ -733,8 +733,8 @@ nnoremap <silent> ,ur :<C-u>Unite -buffer-name=register register -direction=botr
 " 最近使用したファイル一覧
 nnoremap <silent> ,um :<C-u>Unite file_mru -direction=botright -auto-resize -toggle<CR>
 " 常用セット
-nnoremap <silent> ,uu :<C-u>Unite buffer file_mru file file/new -direction=botright -auto-resize -toggle<CR>
-nnoremap <silent> ;; :<C-u>Unite buffer file_mru file file/new -direction=botright -auto-preview -toggle<CR>
+nnoremap <silent> ,uu :<C-u>Unite buffer file_mru file file/new -direction=botright -auto-preview -toggle<CR>
+nnoremap <silent> ;; :<C-u>Unite buffer file_mru file file/new -direction=botright -auto-resize -toggle<CR>
 " 全部乗せ
 nnoremap <silent> ,ua :<C-u>UniteWithBufferDir -buffer-name=files buffer file_mru bookmark file file/new -direction=botright -auto-resize -toggle<CR>
 
