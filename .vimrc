@@ -14,6 +14,11 @@ if has('vim_starting')
     call neobundle#rc(expand('~/vimfiles/bundle/'))
   else
     set runtimepath+=~/.vim/neobundle/
+    let s:log = expand('~/.vim/info/neobundle/')
+    if !isdirectory(s:log)
+      call mkdir(s:log, 'p')
+    endif
+    let g:neobundle#log_filename = s:log . strftime('%Y-%m-%d.log')
     call neobundle#rc(expand('~/.vim/bundle/'))
   endif
 endif
@@ -55,9 +60,11 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'gregsexton/gitv.git'
 "NeoBundle 'Shougo/vim-vcs'
 " Auto Complete
-NeoBundle 'Shougo/neocomplcache'
+" NeoBundle 'Shougo/neocomplcache'
+NeoBundle 'Shougo/neocomplcache.git'
 NeoBundle 'Shougo/neocomplcache-clang'
-NeoBundle 'Shougo/neocomplcache-snippets-complete'
+" NeoBundle 'Shougo/neocomplcache-snippets-complete'
+NeoBundle 'Shougo/neosnippet.git'
 " Unite
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'tsukkee/unite-help'
@@ -141,6 +148,14 @@ NeoBundle 'tpope/vim-markdown'
 NeoBundle 'Shougo/neobundle.vim'
 
 filetype plugin indent on
+
+" Installation check.
+if neobundle#exists_not_installed_bundles()
+  echomsg 'Not installed bundles : ' .
+        \ string(neobundle#get_not_installed_bundle_names())
+  echomsg 'Please execute ":NeoBundleInstall" command.'
+  "finish
+endif
 " }}} plugin neobundle
 
 " ==== General ==== {{{
@@ -665,13 +680,19 @@ let g:neocomplcache_keyword_patterns['default'] = '\h\w*'
 set complete+=k
 
 " Plugin key-mappings.
-imap <C-k>     <Plug>(neocomplcache_snippets_expand)
-smap <C-k>     <Plug>(neocomplcache_snippets_expand)
+imap <C-k>     <Plug>(neosnippets_expand)
+smap <C-k>     <Plug>(neosnippets_expand)
 inoremap <expr><C-g>     neocomplcache#undo_completion()
 inoremap <expr><C-l>     neocomplcache#complete_common_string()
 
 " SuperTab like snippets behavior.
-"imap <expr><TAB> neocomplcache#sources#snippets_complete#expandable() ? "\<Plug>(neocomplcache_snippets_expand)" : pumvisible() ? "\<C-n>" : "\<TAB>"
+"imap <expr><TAB> neosnippet#expandable() ? "\<Plug>(neosnippet_expand_or_jump)" : pumvisible() ? "\<C-n>" : "\<TAB>"
+"smap <expr><TAB> neosnippet#expandable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+
+" For snippet_complete marker.
+if has('conceal')
+  set conceallevel=2 concealcursor=i
+endif
 
 " Recommended key-mappings.
 " <CR>: close popup and save indent.
