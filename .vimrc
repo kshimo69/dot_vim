@@ -105,6 +105,7 @@ NeoBundle 'confluencewiki.vim'
 NeoBundle 'desert256.vim'
 NeoBundle 'tomasr/molokai'
 NeoBundle 'xoria256.vim'
+NeoBundle 'altercation/vim-colors-solarized'
 " Doc
 NeoBundle 'Shougo/echodoc.git'
 NeoBundle 'thinca/vim-ref'
@@ -337,8 +338,10 @@ augroup highlightIdegraphicSpace
   autocmd ColorScheme * highlight IdeographicSpace term=underline ctermbg=Red guibg=Red
   autocmd VimEnter,WinEnter * match IdeographicSpace /　/
 augroup END
-colorscheme xoria256
 syntax on
+let g:solarized_termcolors=256
+set background=light
+colorscheme solarized
 " highlight Folded ctermbg=grey ctermfg=blue guibg=grey guifg=blue
 " highlight FoldColumn ctermfg=green guifg=green
 set title
@@ -751,6 +754,8 @@ let g:unite_enable_start_insert=1
 let g:unite_winheight=15
 "file_mruの表示フォーマットを指定。空にすると表示スピードが高速化される
 let g:unite_source_file_mru_filename_format = ''
+" カーソル行の色
+let g:unite_cursor_line_highlight="CursorLine"
 " バッファ一覧
 nnoremap <silent> ,ub :<C-u>Unite buffer -direction=botright -auto-resize -toggle<CR>
 " ファイル一覧
