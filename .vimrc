@@ -683,8 +683,8 @@ let g:neocomplcache_keyword_patterns['default'] = '\h\w*'
 set complete+=k
 
 " Plugin key-mappings.
-imap <C-k>     <Plug>(neosnippets_expand)
-smap <C-k>     <Plug>(neosnippets_expand)
+imap <C-k>     <Plug>(neosnippet_expand)
+smap <C-k>     <Plug>(neosnippet_expand)
 inoremap <expr><C-g>     neocomplcache#undo_completion()
 inoremap <expr><C-l>     neocomplcache#complete_common_string()
 
