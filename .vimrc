@@ -855,7 +855,7 @@ augroup END
 
 " rst2html
 let g:quickrun_config['rst'] = {
-  \ 'command': 'rst2html.py',
+  \ 'command': 'rst2html',
   \ 'outputter': 'browser',
   \ }
 
