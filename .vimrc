@@ -387,6 +387,7 @@ nnoremap k gk
 nnoremap Y y$
 nnoremap ¥ \
 inoremap ¥ \
+let mapleader = " "  "<Leader>をスペースに
 " }}} Keymap
 
 " Tab {{{
