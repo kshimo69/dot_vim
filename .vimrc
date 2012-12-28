@@ -297,7 +297,7 @@ if has('gui_macvim')
   "set guifont=M+2VM+IPAG\ circle\ Regular:h14
   "set guifont=Monaco:h14
   set guifont=Ricty\ Regular:h16
-  set transparency=20
+  set transparency=5
   "set lines=40
   "set columns=120
   set fuoptions=maxvert,maxhorz
@@ -339,9 +339,15 @@ augroup highlightIdegraphicSpace
   autocmd VimEnter,WinEnter * match IdeographicSpace /　/
 augroup END
 syntax on
-let g:solarized_termcolors=256
-set background=light
-colorscheme solarized
+if has('gui_running')
+  let g:solarized_termcolors=256
+  set background=dark
+  colorscheme solarized
+else
+  let g:solarized_termcolors=256
+  set background=light
+  colorscheme solarized
+endif
 " highlight Folded ctermbg=grey ctermfg=blue guibg=grey guifg=blue
 " highlight FoldColumn ctermfg=green guifg=green
 set title
