@@ -5,3 +5,4 @@
 updated at |datef| |timef|
 
 .. contents:: Table of Contents
+   :local:
