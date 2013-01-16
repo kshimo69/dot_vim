@@ -339,15 +339,11 @@ augroup highlightIdegraphicSpace
   autocmd VimEnter,WinEnter * match IdeographicSpace /　/
 augroup END
 syntax on
-if has('gui_running')
-  let g:solarized_termcolors=256
-  set background=dark
-  colorscheme solarized
-else
-  let g:solarized_termcolors=256
-  set background=light
-  colorscheme solarized
-endif
+
+let g:solarized_termcolors=256
+set background=dark
+colorscheme solarized
+
 " highlight Folded ctermbg=grey ctermfg=blue guibg=grey guifg=blue
 " highlight FoldColumn ctermfg=green guifg=green
 set title
