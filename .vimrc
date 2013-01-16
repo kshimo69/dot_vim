@@ -908,7 +908,7 @@ map <Leader>mn  :MemoNew<CR>
 map <Leader>ml  :MemoList<CR>
 map <Leader>mg  :MemoGrep<CR>
 " let g:memolist_memo_suffix  =  "rst"
-let g:memolist_memo_suffix  =  "mkd"
+let g:memolist_memo_suffix  =  "md"
 let g:memolist_memo_date  =  "%Y-%m-%d %H:%M"
 let g:memolist_memo_date  =  "epoch"
 let g:memolist_memo_date  =  "%D %T"
