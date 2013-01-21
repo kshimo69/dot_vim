@@ -88,6 +88,7 @@ NeoBundle 'osyo-manga/quickrun-hook-u-nya-'
 NeoBundle 'scrooloose/nerdcommenter'
 " Status Line
 NeoBundle 'Lokaltog/vim-powerline'
+" NeoBundle 'Lokaltog/powerline'  " new repository
 " Utils
 NeoBundle 'YankRing.vim'
 NeoBundle 'Align'
