@@ -146,6 +146,8 @@ NeoBundle 'JavaScript-syntax'
 NeoBundle 'jQuery'
 " Markdown
 NeoBundle 'tpope/vim-markdown'
+" Tasks
+NeoBundle 'samsonw/vim-task'
 
 NeoBundle 'Shougo/neobundle.vim'
 
@@ -967,5 +969,10 @@ augroup END
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=2
 " }}} plugin syntastic
+
+" plugin vim-task {{{
+autocmd FileType taskedit inoremap <silent> <buffer> <CR> <ESC>:call Toggle_task_status()<CR>i
+autocmd FileType taskedit noremap <silent> <buffer> <CR> :call Toggle_task_status()<CR>
+" }}} plugin vim-task
 
 " }}} ==== Plugins ====
