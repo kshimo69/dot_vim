@@ -776,7 +776,7 @@ nnoremap <silent> ;; :<C-u>Unite buffer file_mru file file/new -direction=botrig
 " 全部乗せ
 nnoremap <silent> ,ua :<C-u>UniteWithBufferDir -buffer-name=files buffer file_mru bookmark file file/new -direction=botright -auto-resize -toggle<CR>
 " outline
-nnoremap <silent> ,uo :<C-u>Unite -vertical -no-quit outline<CR>
+nnoremap <silent> ,uo :<C-u>Unite -buffer-name=outline -direction=botright -auto-preview -auto-resize outline<CR>
 
 " ウィンドウを分割して開く
 au FileType unite nnoremap <silent> <buffer> <expr> <C-j> unite#do_action('split')
