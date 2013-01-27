@@ -130,12 +130,9 @@ NeoBundle 'lambdalisue/vim-python-virtualenv'
 NeoBundle 'mitechie/pyflakes-pathogen'
 NeoBundle 'reinh/vim-makegreen'
 NeoBundle 'lambdalisue/nose.vim'
-NeoBundle 'sontek/rope-vim'
+NeoBundle 'peplin/ropevim'
 " $ pythonbrew off    # システムのPythonにインストールする
-" $ sudo pip install nose
-" $ sudo pip install
-" git+git://github.com/lambdalisue/nose-machineout.git#egg=nose_machineout
-" $ sudo pip install rope ropemode
+" $ sudo pip install rope ropemode ropevim
 " Rails
 NeoBundle 'tpope/vim-rails'
 " SQL
