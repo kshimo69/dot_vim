@@ -296,7 +296,8 @@ if has('gui_macvim')
   colorscheme macvim
   "set guifont=M+2VM+IPAG\ circle\ Regular:h14
   "set guifont=Monaco:h14
-  set guifont=Ricty\ Regular:h16
+  "set guifont=Ricty\ Regular:h16
+  set guifont=Ricty\ Discord\ Regular\ for\ Powerline:h16
   set transparency=5
   "set lines=40
   "set columns=120
@@ -341,6 +342,7 @@ augroup END
 syntax on
 
 let g:solarized_termcolors=256
+let g:solarized_termtrans=1
 set background=dark
 colorscheme solarized
 
