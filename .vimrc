@@ -87,8 +87,8 @@ NeoBundle 'osyo-manga/quickrun-hook-u-nya-'
 " Comment
 NeoBundle 'scrooloose/nerdcommenter'
 " Status Line
-NeoBundle 'Lokaltog/vim-powerline'
-" NeoBundle 'Lokaltog/powerline'  " new repository
+"NeoBundle 'Lokaltog/vim-powerline'
+NeoBundle 'Lokaltog/powerline'  " new repository
 " Utils
 NeoBundle 'YankRing.vim'
 NeoBundle 'Align'
@@ -616,24 +616,26 @@ endfunction
 " ==== Plugins ==== {{{
 
 " plugin powerline {{{
-let g:Powerline_symbols = 'compatible'
-" splitしてない時にstatus lineが出ない対策
-set laststatus=2
-" Overriding symbols
-let g:Powerline_symbols_override = {
-  \ 'LINE': 'L',
-  \ }
-" Overriding dividers
-" 1: Hard right-pointing arrow
-" 2: Soft right-pointing arrow
-" 3: Hard left-pointing arrow
-" 4: Soft left-pointing arrow
-"let g:Powerline_dividers_override = ['>>', '>', '<<', '<']
-let g:Powerline_dividers_override = ['', '', '', '']
-" ファイル名を短く表示する
-"let g:Powerline_stl_path_style = "short"
-" Insert the charcode segment after the filetype segment
-"call Pl#Theme#InsertSegment('charcode', 'after', 'filetype')
+"   let g:Powerline_symbols = 'compatible'
+"   " splitしてない時にstatus lineが出ない対策
+"   set laststatus=2
+"   " Overriding symbols
+"   let g:Powerline_symbols_override = {
+"     \ 'LINE': 'L',
+"     \ }
+"   " Overriding dividers
+"   " 1: Hard right-pointing arrow
+"   " 2: Soft right-pointing arrow
+"   " 3: Hard left-pointing arrow
+"   " 4: Soft left-pointing arrow
+"   "let g:Powerline_dividers_override = ['>>', '>', '<<', '<']
+"   let g:Powerline_dividers_override = ['', '', '', '']
+"   " ファイル名を短く表示する
+"   "let g:Powerline_stl_path_style = "short"
+"   " Insert the charcode segment after the filetype segment
+"   "call Pl#Theme#InsertSegment('charcode', 'after', 'filetype')
+
+set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 " }}} plugin powerline
 
 " plugin nerdcommenter {{{
