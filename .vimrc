@@ -120,6 +120,7 @@ NeoBundle 'vtreeexplorer'
 " Tags
 NeoBundle 'taglist.vim'  " require: http://ctags.sourceforge.net/
 NeoBundle 'Source-Explorer-srcexpl.vim'
+NeoBundle 'Trinity'
 NeoBundle 'gtags.vim'
 " Syntaxcheck
 NeoBundle 'scrooloose/syntastic.git'
