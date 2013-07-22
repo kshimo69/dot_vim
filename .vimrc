@@ -199,7 +199,7 @@ set wildmenu
 " start expand with <TAB>
 set wildchar=<tab>
 " display type: list
-set wildmode=list:full
+set wildmode=list,full
 " command history
 set history=1000
 "" fold with indent
